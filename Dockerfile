@@ -8,5 +8,5 @@ RUN swupd bundle-add  os-core-dev
 
 RUN git config --global http.sslVerify false
 
-RUN git clone https://github.com/shrmrf/acrn-hypervisor /root/acrn-hypervisor
+COPY  . /root/acrn-hypervisor
 RUN cd /root/acrn-hypervisor; make clean && make all
