@@ -1,10 +1,10 @@
-FROM ubuntu:16.04
+FROM clearlinux:base
 
 MAINTAINER shrmrf "https://github.com/shrmrf"
 
 # Install packages for building acrn
-RUN apt-get update
-RUN apt-get install -y  build-essential wget git
+# RUN swupd update
+RUN swupd bundle-add  os-core-dev
 
 RUN apt-get clean
 
